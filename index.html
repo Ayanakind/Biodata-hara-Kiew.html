@@ -1,151 +1,244 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Biodata Hara Kiew</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
       background-color: #fff8f1;
       color: #333;
-      padding: 20px;
+      font-size: 14px;
       line-height: 1.6;
-      font-size: 14px;
     }
 
-    h1 {
+    section {
+      padding: 40px 20px;
+    }
+
+    h1, h2 {
       text-align: center;
-      color: #111;
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .section-title {
       color: #b43f5b;
-      font-size: 16px;
-      margin-top: 25px;
     }
 
-    .intro {
-      font-size: 14px;
-      margin-bottom: 20px;
+    h1 { font-size: 22px; }
+    h2 { font-size: 18px; }
+
+    p {
+      max-width: 800px;
+      margin: 0 auto 15px auto;
+      text-align: justify;
     }
 
     .button {
       display: inline-block;
       margin-top: 10px;
-      background-color: #f87c8a;
+      padding: 7px 12px;
+      font-size: 13px;
       color: #fff;
-      padding: 7px 11px;
       text-decoration: none;
       border-radius: 6px;
-      font-size: 13px;
+      transition: 0.3s ease;
     }
 
-    .button i {
-      margin-right: 5px;
+    .button:hover {
+      opacity: 0.85;
+      transform: scale(1.05);
     }
 
-    ul.social-icons {
-      list-style: none;
-      padding: 0;
-      margin-top: 10px;
-    }
-
-    ul.social-icons li {
-      display: inline-block;
-      margin-right: 10px;
-    }
-
-    ul.social-icons a {
-      text-decoration: none;
-      color: #fff;
-      padding: 6px 10px;
-      border-radius: 4px;
-      display: inline-block;
-      font-size: 13px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    ul li {
-      margin-bottom: 6px;
-    }
-
+    .gn { background-color: #ec1d45; }
+    .wp { background-color: #f68b1e; }
     .ig { background-color: #E1306C; }
     .tt { background-color: #010101; }
     .fb { background-color: #1877F2; }
+
+    .cta-left {
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .social-center {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    #biodata { background-color: #fff8f1; }
+    #karya { background-color: #fef2f2; }
+    #artikel { background-color: #fff5f8; }
+    #sosial { background-color: #f7f4ff; }
+
+    /* Animasi */
+    @keyframes slideUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInLeft {
+      0% { opacity: 0; transform: translateX(-60px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+      0% { opacity: 0; transform: translateX(60px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes bubbleShake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-3px); }
+      50% { transform: translateX(3px); }
+      75% { transform: translateX(-2px); }
+    }
+
+    .animate-up {
+      animation: slideUp 1s ease-out forwards;
+      opacity: 0;
+    }
+
+    .slide-left {
+      animation: slideInLeft 0.8s ease-out forwards;
+      opacity: 0;
+    }
+
+    .slide-right {
+      animation: slideInRight 0.8s ease-out forwards;
+      opacity: 0;
+    }
+
+    .bubble-shake {
+      animation: bubbleShake 1.2s ease-in-out infinite;
+    }
+
+    ..delay-1 { animation-delay: 0.3s; }
+      .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.5s; }
+       .delay-4 { animation-delay: 0.3s; }
+    ..delay-5 { animation-delay: 0.3s; }
+        .delay-6 { animation-delay: 0.4s; }
+    .delay-7 { animation-delay: 0.5s; }
+        .delay-8 { animation-delay: 0.3s; }
+    .delay-9 { animation-delay: 0.5s; }
+    .delay-10 { animation-delay: 0.3s; }
+        ..delay-11 { animation-delay: 0.3s; }
+        .delay-12 { animation-delay: 0.4s; }
+    .delay-13 { animation-delay: 0.5s; }
+    .delay-14 { animation-delay: 0.3s; }
+            .delay-15 { animation-delay: 0.4s; }
+    .delay-16 { animation-delay: 0.5s; }
+    .delay-17 { animation-delay: 0.3s; }
+  }
+
   </style>
 </head>
 <body>
 
+<section id="biodata" class="animate-up delay-1">
   <h1>Biodata Hara Kiew</h1>
-
   <p>Hara Kiew adalah penulis fiksi yang aktif sejak 2021. Telah menghasilkan berbagai karya dengan gaya yang khas, dari cerita romansa menyentuh hingga teka-teki penuh twist.</p>
+  <p>Berikut adalah sejumlah karya yang telah ditulis oleh Hara Kiew. Karya-karya ini mencerminkan gaya penulisan yang khas dan beragam, mulai dari kisah romansa yang menyentuh, teka-teki penuh misteri, hingga artikel informatif.</p>
+</section>
 
-  <div class="intro">
-    Berikut adalah sejumlah karya yang telah ditulis oleh Hara Kiew.  
-    Karya-karya ini mencerminkan gaya penulisan yang khas dan beragam, mulai dari kisah romansa yang menyentuh, teka-teki penuh misteri, hingga artikel informatif.
-  </div>
-
-  <div>
-    <h2 class="section-title">📖 Karya Non-Eksklusif di GoodNovel</h2>
+<section id="karya">
+  <h2 class="slide-left">📖 Karya Non-Eksklusif di GoodNovel</h2>
+  <div class="slide-left">
     <p><strong>Judul:</strong> Istri Barbar Direktur Sad Boy</p>
     <p><strong>Genre:</strong> Romance, Teka-Teki, Komedi</p>
     <p><strong>Deskripsi:</strong> Kisah mahasiswi yang terpaksa menerima ajakan menikah dari seorang yang belum ia kenal baik demi biaya kemoterapi adiknya. Karya ini tersedia non eksklusif di GoodNovel.</p>
-    <a class="button" href="https://www.novelol.com/goodnovel/share?bid=31001053594" target="_blank"><i class="fa-solid fa-book"></i>Baca di GoodNovel</a>
+    <div class="cta-left">
+      <a class="button gn" href="https://www.novelol.com/goodnovel/share?bid=31001053594" target="_blank">
+        <i class="fa-solid fa-book"></i> Baca di GoodNovel
+      </a>
+    </div>
   </div>
 
-  <div>
-    <h2 class="section-title">📚 Karya di Wattpad</h2>
+  <h2 class="slide-right">📚 Karya di Wattpad</h2>
+  <div class="slide-right">
     <p><strong>1. Bitter Rainy</strong></p>
     <p><strong>Genre:</strong> Romance, Sosial</p>
-    <p><strong>Deskripsi:</strong> Cerita tentang pelecehan seksual, trauma, dan penyembuhan. Penuh emosi, namun tetap meninggalkan harapan di akhir.</p>
-    <a class="button" href="https://www.wattpad.com/story/393155030" target="_blank"><i class="fa-brands fa-wattpad"></i>Baca di Wattpad</a>
+    <p><strong>Deskripsi:</strong> Mengangkat isu pelecehan seksual, luka batin, dan perjalanan menuju pemulihan.</p>
+    <div class="cta-left">
+      <a class="button wp" href="https://www.wattpad.com/story/393155030" target="_blank">
+        <i class="fa-solid fa-book-open"></i> Baca di Wattpad
+      </a>
+    </div>
+  </div>
 
+  <div class="slide-left">
     <p><strong>2. Leaders</strong></p>
-    <p><strong>Genre:</strong> Teka-Teki, Action</p>
-    <p><strong>Deskripsi:</strong> Kisah dua pemimpin geng yang pernah menikah, namun mengalami kecelakaan misterius hingga kehilangan ingatan. Ceritanya penuh rahasia dan teka-teki.</p>
-    <a class="button" href="https://www.wattpad.com/story/309897727" target="_blank"><i class="fa-brands fa-wattpad"></i>Baca di Wattpad</a>
+    <p><strong>Genre:</strong> Romance, Teka-Teki</p>
+    <p><strong>Deskripsi:</strong> Dua pemimpin geng yang pernah menikah tapi lupa segalanya akibat kecelakaan yang disengaja. Penuh misteri yang belum terpecahkan.</p>
+    <div class="cta-left">
+      <a class="button wp" href="https://www.wattpad.com/story/309897727" target="_blank">
+        <i class="fa-solid fa-book-open"></i> Baca di Wattpad
+      </a>
+    </div>
   </div>
+</section>
+<section id="artikel" class="hidden-article">
+  <h2 class="animate-up delay-1">📝 Artikel</h2>
+  <p class="animate-up delay-2">
+    Selain menulis cerita panjang, Hara Kiew juga aktif menulis cerpen pribadi dan telah membuat beberapa artikel selama magang. Artikel-artikel tersebut dimuat dalam situs resmi perusahaan. Beberapa di antaranya adalah:
+  </p>
+  <ul class="article-list">
+    <li class="slide-left delay-3"><a href="https://share.google/NDpwyyDBQkCZOvNwY" target="_blank">Kenapa Gagal Konsisten?</a></li>
+    <li class="slide-right delay-4"><a href="https://share.google/QME0cM2kbtWGQVJWf" target="_blank">Tips Mengubah Kegagalan Jadi Kesuksesan</a></li>
+    <li class="slide-left delay-5"><a href="https://share.google/fzeZn4pXOQX8wA6Uq" target="_blank">Tips Self Improvement</a></li>
+    <li class="slide-right delay-6"><a href="https://share.google/kgzRHKq0kaOBGsLPS" target="_blank">Skill di Luar Kelas</a></li>
+    <li class="slide-left delay-7"><a href="https://share.google/m2vFSXtp7LbTrYWlf" target="_blank">Produktif Setiap Hari</a></li>
+    <li class="slide-right delay-8"><a href="https://share.google/ixLpgsuy8HDNzrG6N" target="_blank">Strategi Belajar Efektif</a></li>
+    <li class="slide-left delay-9"><a href="https://share.google/i0DpQvqaaqRSkKlC5" target="_blank">Mengelola Keuangan</a></li>
+    <li class="slide-right delay-10"><a href="https://share.google/zwCeKgerVmMfVTfZ2" target="_blank">Menabung dari Uang Saku</a></li>
+    <li class="slide-left delay-11"><a href="https://share.google/63F8OYCgAuul5znSG" target="_blank">Overwhelmed?</a></li>
+    <li class="slide-right delay-12"><a href="https://share.google/8taJxrGzQQzxmBpC1" target="_blank">Mindset Growth</a></li>
+    <li class="slide-left delay-13"><a href="https://share.google/pVDIh9e4pwLZQlfk5" target="_blank">5 AM Club</a></li>
+    <li class="slide-right delay-14"><a href="https://share.google/fDJRV1fYHAZunLERB" target="_blank">Ramadhan Tips</a></li>
+    <li class="slide-left delay-15"><a href="https://share.google/prx167rm1Kn8Gbsrn" target="_blank">Keluar dari Stuck</a></li>
+    <li class="slide-right delay-16"><a href="https://share.google/HjZwzn3eITO2Y0wgz" target="_blank">People Pleaser</a></li>
+    <li class="slide-left delay-17"><a href="https://share.google/XGfdQsaGW9BoxSjL9" target="_blank">Takut Memulai Bisnis</a></li>
+  </ul>
+</section>
 
-  <div>
-    <h2 class="section-title">📝 Cerpen & Artikel</h2>
-    <p>Selain menulis cerita panjang, Hara Kiew juga aktif menulis cerpen pribadi dan telah membuat beberapa artikel selama magang. Artikel-artikel tersebut dimuat dalam situs resmi perusahaan. Beberapa di antaranya adalah:</p>
-    
-    <ul>
-      <li><a href="https://share.google/NDpwyyDBQkCZOvNwY" target="_blank">Kenapa Gagal Konsisten?</a></li>
-      <li><a href="https://share.google/QME0cM2kbtWGQVJWf" target="_blank">Tips Mengubah Kegagalan Jadi Kesuksesan</a></li>
-      <li><a href="https://share.google/fzeZn4pXOQX8wA6Uq" target="_blank">Tips Self Improvement untuk Meningkatkan Kualitas Hidup</a></li>
-      <li><a href="https://share.google/kgzRHKq0kaOBGsLPS" target="_blank">Pentingnya Mahasiswa Punya Skill Lain di Luar Kelas</a></li>
-      <li><a href="https://share.google/m2vFSXtp7LbTrYWlf" target="_blank">5 Kebiasaan Sederhana Agar Produktif</a></li>
-      <li><a href="https://share.google/ixLpgsuy8HDNzrG6N" target="_blank">Tips Belajar Efektif Agar Lebih Mudah Paham</a></li>
-      <li><a href="https://share.google/i0DpQvqaaqRSkKlC5" target="_blank">Cara Cerdas Mengelola Keuangan</a></li>
-      <li><a href="https://share.google/zwCeKgerVmMfVTfZ2" target="_blank">Tips Menabung dengan Uang Saku Terbatas</a></li>
-      <li><a href="https://share.google/63F8OYCgAuul5znSG" target="_blank">Penyebab Overwhelmed</a></li>
-      <li><a href="https://share.google/8taJxrGzQQzxmBpC1" target="_blank">Pentingnya Mindset Growth</a></li>
-      <li><a href="https://share.google/pVDIh9e4pwLZQlfk5" target="_blank">Rahasia 5 AM Club</a></li>
-      <li><a href="https://share.google/fDJRV1fYHAZunLERB" target="_blank">Tips Menyambut Ramadhan</a></li>
-      <li><a href="https://share.google/prx167rm1Kn8Gbsrn" target="_blank">Tips Mengatasi Hidup yang Terasa Stuck</a></li>
-      <li><a href="https://share.google/HjZwzn3eITO2Y0wgz" target="_blank">Cara Berhenti Menjadi People Pleaser</a></li>
-      <li><a href="https://share.google/XGfdQsaGW9BoxSjL9" target="_blank">Cara Mengatasi Rasa Takut dalam Memulai Bisnis</a></li>
-    </ul>
-  </div>
-
-  <div>
-    <h2 class="section-title">🌐 Temui Hara Kiew di Media Sosial</h2>
-    <ul class="social-icons">
-      <li><a class="ig" href="https://www.instagram.com/harakiew_?igsh=MXhqOHZoczV5OHd1ZQ==" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-            <li><a class="ig" href="https://www.instagram.com/callme.yanaa__?igsh=eWZpODdidXQ5MTB0" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-      <li><a class="tt" href="https://www.tiktok.com/@harakiew_?_t=ZS-8xjpckqm8rH&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
-      <li><a class="fb" href="https://www.facebook.com/Starlight.Ayn" target="_blank"><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
-    </ul>
-    <p>💌 Untuk kolaborasi, diskusi, atau sekadar menyapa, Hara Kiew terbuka untuk terhubung lewat media sosial.</p>
-  </div>
-
+<script>
+  setTimeout(() => {
+    const artikel = document.getElementById("artikel");
+    artikel.classList.remove("hidden-article");
+  }, 20000); // 4 detik
+</script>
 </body>
+</html>
+<section id="Sosial Media">
+<h2>🌐 Temui Hara Kiew di Media Sosial</h2>
+<p class="animate-up" style="text-align:center; max-width:700px; margin: 20px auto;">
+  💌 Untuk kolaborasi, diskusi, atau sekadar menyapa, Hara Kiew terbuka untuk terhubung lewat media sosial.
+</p>
+
+  <div class="social-center">
+    <a class="button ig bubble-shake" href="https://www.instagram.com/harakiew_" target="_blank">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+    <a class="button ig bubble-shake" href="https://www.instagram.com/callme.yanaa__" target="_blank">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+    <a class="button tt bubble-shake" href="https://www.tiktok.com/@harakiew_" target="_blank">
+      <i class="fa-brands fa-tiktok"></i> TikTok
+    </a>
+    <a class="button fb bubble-shake" href="https://www.facebook.com/Starlight.Ayn" target="_blank">
+      <i class="fa-brands fa-facebook-f"></i> Facebook
+    </a>
+  </div>
+</section>
+</body>  
 </html>
