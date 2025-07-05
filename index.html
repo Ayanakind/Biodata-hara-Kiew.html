@@ -6,10 +6,7 @@
   <title>Biodata Hara Kiew</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
 
     body {
       font-family: Arial, sans-serif;
@@ -21,9 +18,7 @@
       line-height: 1.6;
     }
 
-    section {
-      padding: 40px 20px;
-    }
+    section { padding: 40px 20px; }
 
     h1, h2 {
       text-align: center;
@@ -76,23 +71,23 @@
     }
 
     #biodata { background-color: #fff8f1; }
-    #karya { background-color: #fef2f2; }
+    #karya   { background-color: #fef2f2; }
     #artikel { background-color: #fff5f8; }
-    #sosial { background-color: #f7f4ff; }
+    #sosial  { background-color: #f7f4ff; }
 
-    /* Animasi */
+  /* ANIMASI */
     @keyframes slideUp {
-      0% { opacity: 0; transform: translateY(40px); }
+      0%   { opacity: 0; transform: translateY(40px); }
       100% { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes slideInLeft {
-      0% { opacity: 0; transform: translateX(-60px); }
+      0%   { opacity: 0; transform: translateX(-60px); }
       100% { opacity: 1; transform: translateX(0); }
     }
 
     @keyframes slideInRight {
-      0% { opacity: 0; transform: translateX(60px); }
+      0%   { opacity: 0; transform: translateX(60px); }
       100% { opacity: 1; transform: translateX(0); }
     }
 
@@ -104,7 +99,7 @@
     }
 
     .animate-up {
-      animation: slideUp 1s ease-out forwards;
+      animation: slideUp 2.5s ease-out forwards; /* Lebih lambat */
       opacity: 0;
     }
 
@@ -122,25 +117,45 @@
       animation: bubbleShake 1.2s ease-in-out infinite;
     }
 
-    ..delay-1 { animation-delay: 0.3s; }
-      .delay-2 { animation-delay: 0.4s; }
-    .delay-3 { animation-delay: 0.5s; }
-       .delay-4 { animation-delay: 0.3s; }
-    ..delay-5 { animation-delay: 0.3s; }
-        .delay-6 { animation-delay: 0.4s; }
-    .delay-7 { animation-delay: 0.5s; }
-        .delay-8 { animation-delay: 0.3s; }
-    .delay-9 { animation-delay: 0.5s; }
-    .delay-10 { animation-delay: 0.3s; }
-        ..delay-11 { animation-delay: 0.3s; }
-        .delay-12 { animation-delay: 0.4s; }
-    .delay-13 { animation-delay: 0.5s; }
-    .delay-14 { animation-delay: 0.3s; }
-            .delay-15 { animation-delay: 0.4s; }
-    .delay-16 { animation-delay: 0.5s; }
-    .delay-17 { animation-delay: 0.3s; }
-  }
+..delay-1 { animation-delay: 0.3s; }  
+  .delay-2 { animation-delay: 0.4s; }  
+.delay-3 { animation-delay: 0.5s; }  
+   .delay-4 { animation-delay: 0.3s; }  
+..delay-5 { animation-delay: 0.3s; }  
+    .delay-6 { animation-delay: 0.4s; }  
+.delay-7 { animation-delay: 0.5s; }  
+    .delay-8 { animation-delay: 0.3s; }  
+.delay-9 { animation-delay: 0.5s; }  
+.delay-10 { animation-delay: 0.3s; }  
+    .delay-11 { animation-delay: 0.3s; }  
+    delay-12 { animation-delay: 0.4s; }  
+.delay-13 { animation-delay: 0.5s; }  
+.delay-14 { animation-delay: 0.3s; }  
+        .delay-15 { animation-delay: 0.4s; }  
+.delay-16 { animation-delay: 0.5s; }  
+.delay-17 { animation-delay: 0.3s; }
 
+ /* Artikel awal disembunyikan */
+    #artikel {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    #artikel.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    ul.article-list {
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: 40px;
+    }
+
+    ul.article-list li {
+      margin-bottom: 6px;
+    }
   </style>
 </head>
 <body>
@@ -152,8 +167,8 @@
 </section>
 
 <section id="karya">
-  <h2 class="slide-left">📖 Karya Non-Eksklusif di GoodNovel</h2>
-  <div class="slide-left">
+  <h2 class="slide-left delay-1">📖 Karya Non-Eksklusif di GoodNovel</h2>
+  <div class="slide-left delay-2">
     <p><strong>Judul:</strong> Istri Barbar Direktur Sad Boy</p>
     <p><strong>Genre:</strong> Romance, Teka-Teki, Komedi</p>
     <p><strong>Deskripsi:</strong> Kisah mahasiswi yang terpaksa menerima ajakan menikah dari seorang yang belum ia kenal baik demi biaya kemoterapi adiknya. Karya ini tersedia non eksklusif di GoodNovel.</p>
@@ -164,8 +179,8 @@
     </div>
   </div>
 
-  <h2 class="slide-right">📚 Karya di Wattpad</h2>
-  <div class="slide-right">
+  <h2 class="slide-right delay-3">📚 Karya di Wattpad</h2>
+  <div class="slide-right delay-4">
     <p><strong>1. Bitter Rainy</strong></p>
     <p><strong>Genre:</strong> Romance, Sosial</p>
     <p><strong>Deskripsi:</strong> Mengangkat isu pelecehan seksual, luka batin, dan perjalanan menuju pemulihan.</p>
@@ -174,12 +189,11 @@
         <i class="fa-solid fa-book-open"></i> Baca di Wattpad
       </a>
     </div>
-  </div>
-
-  <div class="slide-left">
+<br>
+  <div class="slide-left delay-5">
     <p><strong>2. Leaders</strong></p>
     <p><strong>Genre:</strong> Romance, Teka-Teki</p>
-    <p><strong>Deskripsi:</strong> Dua pemimpin geng yang pernah menikah tapi lupa segalanya akibat kecelakaan yang disengaja. Penuh misteri yang belum terpecahkan.</p>
+    <p><strong>Deskripsi:</strong> Bercerita tentang dua pemimpin geng yang lupa identitas mereka karena amnesia akibat sebuah kecelakaan besar. Cerita ini penuh dengan misteri yang belum terpecahkan.</p>
     <div class="cta-left">
       <a class="button wp" href="https://www.wattpad.com/story/309897727" target="_blank">
         <i class="fa-solid fa-book-open"></i> Baca di Wattpad
@@ -187,44 +201,46 @@
     </div>
   </div>
 </section>
-<section id="artikel" class="hidden-article">
+
+<section id="artikel">
   <h2 class="animate-up delay-1">📝 Artikel</h2>
   <p class="animate-up delay-2">
     Selain menulis cerita panjang, Hara Kiew juga aktif menulis cerpen pribadi dan telah membuat beberapa artikel selama magang. Artikel-artikel tersebut dimuat dalam situs resmi perusahaan. Beberapa di antaranya adalah:
   </p>
-  <ul class="article-list">
-    <li class="slide-left delay-3"><a href="https://share.google/NDpwyyDBQkCZOvNwY" target="_blank">Kenapa Gagal Konsisten?</a></li>
-    <li class="slide-right delay-4"><a href="https://share.google/QME0cM2kbtWGQVJWf" target="_blank">Tips Mengubah Kegagalan Jadi Kesuksesan</a></li>
-    <li class="slide-left delay-5"><a href="https://share.google/fzeZn4pXOQX8wA6Uq" target="_blank">Tips Self Improvement</a></li>
-    <li class="slide-right delay-6"><a href="https://share.google/kgzRHKq0kaOBGsLPS" target="_blank">Skill di Luar Kelas</a></li>
-    <li class="slide-left delay-7"><a href="https://share.google/m2vFSXtp7LbTrYWlf" target="_blank">Produktif Setiap Hari</a></li>
-    <li class="slide-right delay-8"><a href="https://share.google/ixLpgsuy8HDNzrG6N" target="_blank">Strategi Belajar Efektif</a></li>
-    <li class="slide-left delay-9"><a href="https://share.google/i0DpQvqaaqRSkKlC5" target="_blank">Mengelola Keuangan</a></li>
-    <li class="slide-right delay-10"><a href="https://share.google/zwCeKgerVmMfVTfZ2" target="_blank">Menabung dari Uang Saku</a></li>
-    <li class="slide-left delay-11"><a href="https://share.google/63F8OYCgAuul5znSG" target="_blank">Overwhelmed?</a></li>
-    <li class="slide-right delay-12"><a href="https://share.google/8taJxrGzQQzxmBpC1" target="_blank">Mindset Growth</a></li>
-    <li class="slide-left delay-13"><a href="https://share.google/pVDIh9e4pwLZQlfk5" target="_blank">5 AM Club</a></li>
-    <li class="slide-right delay-14"><a href="https://share.google/fDJRV1fYHAZunLERB" target="_blank">Ramadhan Tips</a></li>
-    <li class="slide-left delay-15"><a href="https://share.google/prx167rm1Kn8Gbsrn" target="_blank">Keluar dari Stuck</a></li>
-    <li class="slide-right delay-16"><a href="https://share.google/HjZwzn3eITO2Y0wgz" target="_blank">People Pleaser</a></li>
-    <li class="slide-left delay-17"><a href="https://share.google/XGfdQsaGW9BoxSjL9" target="_blank">Takut Memulai Bisnis</a></li>
-  </ul>
-</section>
+<ul class="article-list">
+  <li class="artikel-item delay-3"><a href="https://share.google/NDpwyyDBQkCZOvNwY" target="_blank">Penyebab Gagal Konsisten</a></li>
+  <li class="artikel-item delay-4"><a href="https://share.google/QME0cM2kbtWGQVJWf" target="_blank">Tips Mengubah Kegagalan Menjadi Kesuksesan.</a></li>
+  <li class="artikel-item delay-5"><a href="https://share.google/fzeZn4pXOQX8wA6Uq" target="_blank">Tips Self Improvement</a></li>
+  <li class="slide-right delay-6"><a href="https://share.google/kgzRHKq0kaOBGsLPS" target="_blank">Pentingnya Memiliki Skill di Luar Kelas Bagi Mahasiswa</a></li>
+  <li class="slide-left delay-7"><a href="https://share.google/m2vFSXtp7LbTrYWlf" target="_blank">5 Kebiasaan Sederhana yang Bisa Meningkatkan Produktifitas</a></li>
+  <li class="slide-right delay-8"><a href="https://share.google/ixLpgsuy8HDNzrG6N" target="_blank">Strategi Belajar Efektif Agar Mudah Paham</a></li>
+  <li class="slide-left delay-9"><a href="https://share.google/i0DpQvqaaqRSkKlC5" target="_blank">Cara Cerdas Mengelola Keuangan</a></li>
+  <li class="slide-right delay-10"><a href="https://share.google/zwCeKgerVmMfVTfZ2" target="_blank">Tips Menabung dari Uang Saku Terbatas</a></li>
+  <li class="slide-left delay-11"><a href="https://share.google/63F8OYCgAuul5znSG" target="_blank">Penyebab Overwhelmed</a></li>
+  <li class="slide-right delay-12"><a href="https://share.google/8taJxrGzQQzxmBpC1" target="_blank">Pentingnya Mindset Growth</a></li>
+  <li class="slide-left delay-13"><a href="https://share.google/pVDIh9e4pwLZQlfk5" target="_blank">Rahasia 5 AM Club</a></li>
+  <li class="slide-right delay-14"><a href="https://share.google/fDJRV1fYHAZunLERB" target="_blank">Tips menyambut Ramadhan</a></li>
+  <li class="slide-left delay-15"><a href="https://share.google/prx167rm1Kn8Gbsrn" target="_blank">Tips Keluar dari Rasa Stuck</a></li>
+  <li class="slide-right delay-16"><a href="https://share.google/HjZwzn3eITO2Y0wgz" target="_blank">Cara Berhenti Menjadi People Pleaser</a></li>
+  <li class="slide-left delay-17"><a href="https://share.google/XGfdQsaGW9BoxSjL9" target="_blank">Cara Mengatasi Rasa Takut Memulai Bisnis</a></li>
+</ul>
 
 <script>
   setTimeout(() => {
-    const artikel = document.getElementById("artikel");
-    artikel.classList.remove("hidden-article");
-  }, 20000); // 4 detik
+    document.getElementById("judul-artikel").classList.add("animate-up", "delay-1");
+    document.getElementById("paragraf-artikel").classList.add("animate-up", "delay-2");
+    const items = document.querySelectorAll(".artikel-item");
+    items.forEach(item => {
+      item.classList.add("slide-left"); // atau slide-right sesuai
+    });
+  }, 4000); // pending 4 detik
 </script>
-</body>
-</html>
-<section id="Sosial Media">
-<h2>🌐 Temui Hara Kiew di Media Sosial</h2>
-<p class="animate-up" style="text-align:center; max-width:700px; margin: 20px auto;">
-  💌 Untuk kolaborasi, diskusi, atau sekadar menyapa, Hara Kiew terbuka untuk terhubung lewat media sosial.
-</p>
 
+<section id="sosial">
+  <h2>🌐 Temui Hara Kiew di Media Sosial</h2>
+  <p class="animate-up delay-1" style="text-align:center; max-width:700px; margin: 20px auto;">
+    💌 Untuk kolaborasi, diskusi, atau sekadar menyapa, Hara Kiew terbuka untuk terhubung lewat media sosial.
+  </p>
   <div class="social-center">
     <a class="button ig bubble-shake" href="https://www.instagram.com/harakiew_" target="_blank">
       <i class="fa-brands fa-instagram"></i> Instagram
@@ -240,5 +256,14 @@
     </a>
   </div>
 </section>
-</body>  
+
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+      const artikel = document.getElementById("artikel");
+      artikel.classList.add("show");
+    }, 4000); // 4000ms = 4 detik
+  });
+</script>
+</body>
 </html>
